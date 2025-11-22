@@ -1,0 +1,507 @@
+.page-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+    padding: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-container {
+      padding: 1rem;
+    }
+  }
+  
+  .content-wrapper-medium {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .header-icon {
+    padding: 0.75rem;
+    background: rgba(168, 85, 247, 0.2);
+    border-radius: 0.75rem;
+    flex-shrink: 0;
+  }
+  
+  .header-icon svg {
+    color: #a855f7;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .header-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+  }
+  
+  .header-tagline {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-style: italic;
+  }
+
+  .header-icon-profile {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid #a855f7;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+    background: rgba(168, 85, 247, 0.2);
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filter-button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filter-button.active {
+    background: #a855f7;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+  }
+  
+  .filter-button:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+  }
+  
+  .filter-button:not(.active):hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .add-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #10b981;
+    color: white;
+    border-radius: 9999px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+  }
+  
+  .add-button:hover {
+    background: #059669;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  th {
+    text-align: left;
+    padding: 1rem;
+    color: #9ca3af;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  tbody tr:hover .book-name {
+    color: #a855f7;
+  }
+  
+  td {
+    padding: 1rem;
+  }
+  
+  .book-name {
+    color: white;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .author-name {
+    color: #d1d5db;
+  }
+  
+  .date-cell {
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+  
+  .empty-state {
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .hint-text {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
+
+  .page-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+    padding: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-container {
+      padding: 1rem;
+    }
+  }
+  
+  .content-wrapper-medium {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .header-icon-profile {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid #a855f7;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+    background: rgba(168, 85, 247, 0.2);
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .header-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+  }
+  
+  .header-tagline {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-style: italic;
+  }
+  
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filter-button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filter-button.active {
+    background: #a855f7;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+  }
+  
+  .filter-button:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+  }
+  
+  .filter-button:not(.active):hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .add-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #10b981;
+    color: white;
+    border-radius: 9999px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+  }
+  
+  .add-button:hover {
+    background: #059669;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  th {
+    text-align: left;
+    padding: 1rem;
+    color: #9ca3af;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  tbody tr:hover .book-name {
+    color: #a855f7;
+  }
+  
+  td {
+    padding: 1rem;
+  }
+  
+  .table-book-cover {
+    width: 3rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .table-book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .no-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+  }
+  
+  .book-name {
+    color: white;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .author-name {
+    color: #d1d5db;
+  }
+  
+  .date-cell {
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+  
+  .empty-state {
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .right-controls {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .sort-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+  }
+  
+  .sort-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .filter-button {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filter-button.active {
+    background: #a855f7;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+  }
+  
+  .filter-button:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+  }
+  
+  .filter-button:not(.active):hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .add-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #10b981;
+    color: white;
+    border-radius: 9999px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+  }
+  
+  .add-button:hover {
+    background: #059669;
+  }
+  
+  .hint-text {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
