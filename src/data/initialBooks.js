@@ -37,4 +37,4 @@ export const initialBooks = [
     },
   ];
   
-  export const categories = ["All", "Thriller", "Simple", "Selfhelp", "Fiction"];
+  export const categories = ["All", "Thriller", "Simple", "Selfhelp", "Fantasy"];
