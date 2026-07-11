@@ -7,7 +7,7 @@ export default function AddBookModal({ onClose, onAdd }) {
   const [newBook, setNewBook] = useState({ 
     name: "", 
     author: "", 
-    category: "Fiction", 
+    category: "Fantasy", 
     date: "", 
     image: null, // Changed to null for File object
     notes: "" 
