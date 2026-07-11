@@ -38,10 +38,3 @@ export const initialBooks = [
   ];
   
   export const categories = ["All", "Thriller", "Simple", "Selfhelp", "Fiction"];
-
-  export const getCategoryCount = (categoryName) => {
-    if (categoryName === "All") {
-      return initialBooks.length;
-    }
-    return initialBooks.filter(book => book.category === categoryName).length;
-  };
