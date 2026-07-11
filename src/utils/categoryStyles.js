@@ -3,7 +3,7 @@ export const getCategoryClass = (category) => {
       case "Thriller": return "category-thriller";
       case "Selfhelp": return "category-selfhelp";
       case "Simple": return "category-simple";
-      case "Fiction": return "category-fiction";
+      case "Fantasy": return "category-fantasy";
       default: return "category-default";
     }
   };
