@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Book, Plus, ArrowUpDown } from 'lucide-react';
 import CategoryBadge from '../CategoryBadge/CategoryBadge';
-import { categories, getCategoryCount } from '../../data/initialBooks';
+import { categories } from '../../data/initialBooks';
 import { bookAPI } from '../../services/api';
 import './BookList.css';
 import shajith from './shajith.jpeg';
@@ -26,6 +26,14 @@ export default function BookList({ books, filter, onFilterChange, onBookClick, o
   const toggleSortOrder = () => {
     setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
   };
+
+  const getCategoryCount = (category) => {
+  if (category === "All") {
+    return books.length;
+  }
+
+  return books.filter((book) => book.category === category).length;
+};
 
   return (
     <div className="page-container">
