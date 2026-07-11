@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Book, Plus, ArrowUpDown } from 'lucide-react';
 import CategoryBadge from '../CategoryBadge/CategoryBadge';
-import { categories } from '../../data/initialBooks';
+import { categories, getCategoryCount } from '../../data/initialBooks';
 import { bookAPI } from '../../services/api';
 import './BookList.css';
 import shajith from './shajith.jpeg';
@@ -52,7 +52,12 @@ export default function BookList({ books, filter, onFilterChange, onBookClick, o
                 onClick={() => onFilterChange(cat)}
                 className={`filter-button ${filter === cat ? 'active' : ''}`}
               >
-                {cat}
+                {cat} 
+                {filter === cat && (
+  <span className="filter-count">
+    {" "}({getCategoryCount(cat)})
+  </span>
+)}
               </button>
             ))}
           </div>
